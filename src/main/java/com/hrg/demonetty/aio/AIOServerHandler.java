@@ -25,6 +25,7 @@ public class AIOServerHandler implements CompletionHandler<AsynchronousSocketCha
               //获取读取的数据  
               String resultData = new String(attachment.array()).trim();  
               System.out.println("Server -> " + "收到客户端的数据信息为:" + resultData);  
+              
               String response = resultData;  
               write(asynSocketChannel, response);  
           }  
