@@ -5,7 +5,9 @@ import java.nio.channels.CompletionHandler;
 import java.util.concurrent.ExecutionException;
 
 public class AIOServerHandler implements CompletionHandler<AsynchronousSocketChannel, AIOServer> {  
+	
   private final Integer BUFFER_SIZE = 1024;  
+  
   @Override  
   public void completed(AsynchronousSocketChannel asynSocketChannel, AIOServer attachment) {  
       // 保证多个客户端都可以阻塞  

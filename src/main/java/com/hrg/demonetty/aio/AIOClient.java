@@ -5,9 +5,11 @@ import java.nio.channels.AsynchronousSocketChannel;
 import java.util.Random;
 
 public class AIOClient implements Runnable{  
+	
     private static Integer PORT = 8888;  
     private static String IP_ADDRESS = "127.0.0.1";
     private AsynchronousSocketChannel asynSocketChannel ;  
+    
     public AIOClient() throws Exception {  
         asynSocketChannel = AsynchronousSocketChannel.open();  // 打开通道  
     }  
